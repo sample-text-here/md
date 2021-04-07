@@ -15,7 +15,10 @@ class Server {
 		if (method === "GET" && this.map.has(file)) {
 			const fromMap = this.map.get(file);
 			return res
-				.writeHead(200, { "Content-Type": fromMap.type })
+				.writeHead(200, {
+					"Content-Type": fromMap.type,
+					"Cache-Control": "max-age=600",
+				})
 				.end(fromMap.fmt);
 		}
 		if (this.handlers.has(method)) {

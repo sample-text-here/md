@@ -6,11 +6,15 @@ body {
 	max-width: 550px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	font-family: sans-serif;
 }
 
-code, pre, key {
+code,
+pre,
+key {
 	font-family: Monaco, "Courier New", monospace;
 	border-radius: 3px;
 	background: #eee;
@@ -36,10 +40,18 @@ blockquote {
 	margin-left: 3px;
 }
 
-hr { margin: 1em 0; }
-a { color: #2082ea; }
-a:visited {	color: #741ac9; }
-li { line-height: 1.5; }
+hr {
+	margin: 1em 0;
+}
+a {
+	color: #2082ea;
+}
+a:visited {
+	color: #741ac9;
+}
+li {
+	line-height: 1.5;
+}
 
 @media (prefers-color-scheme: dark) {
 	body {
@@ -47,11 +59,19 @@ li { line-height: 1.5; }
 		color: #eee;
 	}
 
-	code, pre, key {
+	code,
+	pre,
+	key {
 		background: #444;
 	}
 
-	key { box-shadow: 0 3px 0 #333; }
-	a { color: #66b0f0; }
-	a:visited { color: #a65fea; }
+	key {
+		box-shadow: 0 3px 0 #333;
+	}
+	a {
+		color: #66b0f0;
+	}
+	a:visited {
+		color: #a65fea;
+	}
 }

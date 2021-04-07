@@ -10,11 +10,16 @@ function list(str, kind) {
 	);
 }
 
-function renderMarkdown(text) {
-	return list(list(text.replace(/\r\n/g, "\n"), "ul"), "ol")
+function clean(str) {
+	return str
+		.replace(/\r\n/g, "\n")
 		.replace(/&/g, "&amp;")
 		.replace(/</g, "&lt;")
-		.replace(/>/g, "&gt;")
+		.replace(/>/g, "&gt;");
+}
+
+function renderMarkdown(text) {
+	return list(list(clean(text), "ul"), "ol")
 		.replace(/###### (.+)/gim, "<h6>$1</h6>")
 		.replace(/##### (.+)/gim, "<h5>$1</h5>")
 		.replace(/#### (.+)/gim, "<h4>$1</h4>")

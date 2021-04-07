@@ -1,7 +1,7 @@
 {
 	"name": "md",
 	"version": "1.0.0",
-	"description": "simple and efficient web hosting",
+	"description": "simple and efficient web server",
 	"author": "ZestyLemonade",
 	"main": "index.js",
 	"license": "WTFPL"

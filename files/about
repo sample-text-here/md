@@ -1,0 +1,18 @@
+<h1>about</h1>
+<h2>what is this</h2>
+a simple markdown site hoster. its as simple as entering
+your markdown in the text box, and clicking "create"
+<h2>why is this</h2>
+the modern web is just too bloated. this is my effort in 
+making an easy way to host fast and good looking websites.
+markdown is simple and powerful enough to host a lot of
+existing websites.
+<h2>how is this</h2>
+thanks for asking :)<br />
+this has no dependecies, nothing to <code>npm install</code>.
+the core server is only ~130 LOC. as a result, it starts
+almost instantly and is incredibly fast. the client-side js
+is an enhancement, but not a requirement (imo that's how it
+should be)
+<hr />
+made by zestylemonade

@@ -31,8 +31,8 @@ function renderMarkdown(text) {
 		.replace(/\*\*(.+?\*?)\*\*/gim, "<b>$1</b>")
 		.replace(/\*(.+?)\*/gim, "<i>$1</i>")
 		.replace(/^\s*---+\s*$/gim, "<hr />")
-		.replace(/`((\\.|[^`])+)`/gim, "<code>$1</code>")
 		.replace(/```.*\n((.|\n)+?)```/gim, "<pre>$1</pre>")
+		.replace(/`((\\.|[^`])+)`/gim, "<code>$1</code>")
 		.replace(/!\[(.+?)\]\((.+?)\)/gim, '<img src="$2" alt="$1" />')
 		.replace(/\[(.+?)\]\((.+?)\)/gim, '<a href="$1">$2</a>')
 		.replace(/(?<=\n)\n/gim, "<br />");

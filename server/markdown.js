@@ -1,5 +1,5 @@
-const ul = /(([\-*]\s+.+\n?)+)/g;
-const ol = /(([0-9]\. .+\n?)+)/g;
+const ul = /(([\-*]\s+.+\n?)+)/gi;
+const ol = /(([0-9]\.\s+.+\n?)+)/gi;
 const bq = (b) =>
 	`<blockquote>${b.replace(/^\s*()&gt;?\s*/g, "")}</blockquote>`;
 
@@ -19,7 +19,7 @@ function clean(str) {
 }
 
 function renderMarkdown(text) {
-	return list(list(clean(text), "ul"), "ol")
+	return list(list(clean(text).replace(/^\s*---+\s*$/gim, "<hr />"), "ul"), "ol")
 		.replace(/###### (.+)/gim, "<h6>$1</h6>")
 		.replace(/##### (.+)/gim, "<h5>$1</h5>")
 		.replace(/#### (.+)/gim, "<h4>$1</h4>")
@@ -30,7 +30,6 @@ function renderMarkdown(text) {
 		.replace(/~~(.+?)~~/gim, "<s>$1</s>")
 		.replace(/\*\*(.+?\*?)\*\*/gim, "<b>$1</b>")
 		.replace(/\*(.+?)\*/gim, "<i>$1</i>")
-		.replace(/^\s*---+\s*$/gim, "<hr />")
 		.replace(/```.*\n((.|\n)+?)```/gim, "<pre>$1</pre>")
 		.replace(/`((\\.|[^`])+)`/gim, "<code>$1</code>")
 		.replace(/!\[(.+?)\]\((.+?)\)/gim, '<img src="$2" alt="$1" />')

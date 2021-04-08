@@ -1,29 +1,21 @@
 body {
-	font: 16px/1.2 Georgia, serif;
+	font: 1.1em/1.2 Georgia, serif;
 	color: #222;
 	margin: 0 auto;
 	padding: 2em;
 	max-width: 550px;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
 	font-family: sans-serif;
 }
 
-code,
-pre,
-key {
+code, pre, key {
 	font-family: Monaco, "Courier New", monospace;
 	border-radius: 3px;
 	background: #eee;
 	padding: 3px;
 	overflow-x: auto;
-}
-
-key {
-	box-shadow: 0 3px 0 #ddd;
 }
 
 img {
@@ -40,18 +32,13 @@ blockquote {
 	margin-left: 3px;
 }
 
-hr {
-	margin: 1em 0;
-}
-a {
-	color: #2082ea;
-}
-a:visited {
-	color: #741ac9;
-}
-li {
-	line-height: 1.5;
-}
+
+pre { padding: 8px; }
+key { box-shadow: 0 3px 0 #ddd; }
+hr { margin: 1em 0; }
+a { color: #2082ea; }
+a:visited { color: #741ac9;}
+li { line-height: 1.5; }
 
 @media (prefers-color-scheme: dark) {
 	body {
@@ -59,19 +46,8 @@ li {
 		color: #eee;
 	}
 
-	code,
-	pre,
-	key {
-		background: #444;
-	}
-
-	key {
-		box-shadow: 0 3px 0 #333;
-	}
-	a {
-		color: #66b0f0;
-	}
-	a:visited {
-		color: #a65fea;
-	}
+	code, pre, key { background: #444; }
+	key { box-shadow: 0 3px 0 #333; }
+	a { color: #66b0f0; }
+	a:visited { color: #a65fea; }
 }
